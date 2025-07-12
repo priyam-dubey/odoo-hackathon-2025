@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_profile,access_user_profile,model_skill_user,,1,1,1,1
+access_skill,access_skill,model_skill_skill,,1,1,1,1
+access_swap_request,access_swap_request,model_skill_swap,,1,1,1,1

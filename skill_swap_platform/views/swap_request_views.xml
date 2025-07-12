@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_form_swap" model="ir.ui.view">
+        <field name="name">skill.swap.form</field>
+        <field name="model">skill.swap</field>
+        <field name="arch" type="xml">
+            <form string="Swap Request">
+                <sheet>
+                    <group>
+                        <field name="requester_id"/>
+                        <field name="receiver_id"/>
+                        <field name="offered_skill_id"/>
+                        <field name="requested_skill_id"/>
+                        <field name="status"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_swap" model="ir.ui.view">
+        <field name="name">skill.swap.tree</field>
+        <field name="model">skill.swap</field>
+        <field name="arch" type="xml">
+            <tree string="Swap Requests">
+                <field name="requester_id"/>
+                <field name="receiver_id"/>
+                <field name="offered_skill_id"/>
+                <field name="requested_skill_id"/>
+                <field name="status"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_swap" model="ir.actions.act_window">
+        <field name="name">Swap Requests</field>
+        <field name="res_model">skill.swap</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_swap"
+              name="Swap Requests"
+              parent="menu_skill_swap_root"
+              action="action_swap"/>
+</odoo>

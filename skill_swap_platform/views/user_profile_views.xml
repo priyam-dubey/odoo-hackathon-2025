@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_form_user_profile" model="ir.ui.view">
+        <field name="name">skill.user.form</field>
+        <field name="model">skill.user</field>
+        <field name="arch" type="xml">
+            <form string="User Profile">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="location"/>
+                        <field name="profile_photo" widget="image" class="oe_avatar"/>
+                        <field name="availability"/>
+                        <field name="is_public"/>
+                    </group>
+                    <group>
+                        <field name="skills_offered_ids" widget="many2many_tags"/>
+                        <field name="skills_wanted_ids" widget="many2many_tags"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_tree_user_profile" model="ir.ui.view">
+        <field name="name">skill.user.tree</field>
+        <field name="model">skill.user</field>
+        <field name="arch" type="xml">
+            <tree string="User Profiles">
+                <field name="name"/>
+                <field name="location"/>
+                <field name="availability"/>
+                <field name="is_public"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_user_profile" model="ir.actions.act_window">
+        <field name="name">User Profiles</field>
+        <field name="res_model">skill.user</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create your first user profile
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_skill_swap_root" name="Skill Swap"/>
+    <menuitem id="menu_user_profile" name="User Profiles"
+              parent="menu_skill_swap_root"
+              action="action_user_profile"/>
+</odoo>
