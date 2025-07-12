@@ -27,14 +27,14 @@ request others in return
 
 | Name                | Role              | Email                        |
 |---------------------|-------------------|-------------------------------|
-| Priyambad Dubey     | Developer & Lead  | priyambaddubey2004@gmail.com  |
-| Satyarth            | Backend Developer | satyarth8292218622@gmail.com  |
+| Priyambad Kumar Dubey | Developer & Lead  | priyambaddubey2004@gmail.com  |
+| Satyarth Singh        | Backend Developer | satyarth8292218622@gmail.com  |
 
 ---
 
 ## 🎥 Demo Video
 
-atill to upload
+#todo later
 
 > 📌 Replace `VIDEO_ID_HERE` with your uploaded YouTube video ID.
 
